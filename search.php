@@ -2,6 +2,12 @@
 
 header('Content-Type: application/json');
 
+if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
+    http_response_code(405);
+    echo json_encode(['error' => 'Método no permitido']);
+    exit;
+}
+
 $texto = trim($_GET['texto'] ?? '');
 
 // Minimum 3 characters required for search
