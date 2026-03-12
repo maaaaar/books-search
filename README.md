@@ -26,12 +26,12 @@ php -S localhost:8080
 
 **3. Realiza una búsqueda:**
 ```bash
-curl "http://localhost:8080/buscar.php?texto=Cristina"
+curl "http://localhost:8080/search.php?texto=Cristina"
 ```
 
 O abre directamente en el navegador:
 ```
-http://localhost:8080/buscar.php?texto=Cristina
+http://localhost:8080/search.php?texto=Cristina
 ```
 
 ---
@@ -40,12 +40,12 @@ http://localhost:8080/buscar.php?texto=Cristina
 
 Buscar por título o autor:
 ```bash
-curl "http://localhost:8080/buscar.php?texto=Cristina"
+curl "http://localhost:8080/search.php?texto=Cristina"
 ```
 
 Búsqueda con menos de 3 caracteres (devuelve error):
 ```bash
-curl "http://localhost:8080/buscar.php?texto=a"
+curl "http://localhost:8080/search.php?texto=a"
 ```
 
 ---
@@ -54,7 +54,7 @@ curl "http://localhost:8080/buscar.php?texto=a"
 
 ```
 books-search/
-├── buscar.php      # Webservice principal con la lógica de búsqueda
+├── search.php      # Webservice principal con la lógica de búsqueda
 └── dataset.json    # Dataset con los libros disponibles
 ```
 
