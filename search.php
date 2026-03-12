@@ -68,4 +68,4 @@ foreach ($authorsSet as $authorName) {
 echo json_encode([
     'books'   => $books,
     'authors' => $authors,
-], JSON_PRETTY_PRINT);
+], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
